@@ -50,3 +50,90 @@ margin:20px 0;
   color:#5865F2;
   text-decoration:none;
 }
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  background: #23272a;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #5865F2;
+}
+
+/* Hero sectie */
+.hero {
+  background: linear-gradient(135deg, #5865F2, #23272a);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.hero button {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  background: #e84118;
+}
+
+/* Nieuwsoverzicht */
+.news {
+  background: #23272a;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.news h2 {
+  margin-bottom: 15px;
+}
+
+.news ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.news ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #5865F2;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #999;
+  padding: 20px 0;
+}
