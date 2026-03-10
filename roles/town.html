@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Town Rollen - TOSbot Wiki</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="box">
+<h1>🏘️ Town Rollen</h1>
+
+<!-- Zoekveld -->
+<input type="text" id="roleSearch" placeholder="Zoek een rol..." onkeyup="filterRoles()" style="padding:10px; width:100%; margin-bottom:20px; border-radius:8px; border:none; font-size:16px;">
+
+<div class="roles-overview" id="roleCards">
+  <!-- Role cards worden via JS geladen -->
+</div>
+
+<br>
+<a href="index.html">⬅ Terug naar Facties</a>
+</div>
+
+<script>
+// Rol data voor Town factie
+const roles = [
+  {name: "Sheriff", link: "sheriff.html"},
+  {name: "Doctor", link: "doctor.html"},
+  {name: "Spy", link: "spy.html"}
+];
+
+// Filter functie
+function filterRoles() {
+    const input = document.getElementById("roleSearch").value.toLowerCase();
+    const container = document.getElementById("roleCards");
+    container.innerHTML = "";
+
+    const filtered = roles.filter(r => r.name.toLowerCase().includes(input));
+
+    if(filtered.length === 0){
+        container.innerHTML = "<p>Geen rollen gevonden...</p>";
+        return;
+    }
+
+    filtered.forEach(r => {
+        const card = document.createElement("div");
+        card.className = "role-card";
+        card.innerHTML = `
+            <img src="../images/${r.name.toLowerCase()}.png" alt="${r.name}">
+            <h3>${r.name}</h3>
+            <a href="${r.link}">Bekijk rol</a>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// Initial load
+window.onload = filterRoles;
+</script>
+</body>
+</html>
